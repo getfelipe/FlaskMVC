@@ -15,7 +15,7 @@ updt_layout = html.Div(
                                         placeholder="Selecione ou busque um filme...",
                                         options=[],
                                         searchable=True,  # Ativar busca
-                                        style={"width": "50%"}  # Ajustar a largura do dropdown
+                                        style={"width": "100%"}  # Ajustar a largura do dropdown
                                     ),
                                 ]),
                             ]),

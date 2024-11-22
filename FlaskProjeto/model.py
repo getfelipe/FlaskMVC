@@ -9,24 +9,33 @@ class FilmesDB:
             self.cursor = self.conn.cursor()
         except Exception as ex:
             print(ex)
+            self.cursor.close()
             self.conn.close()
         else:
             return self.cursor
         
     def execute_sql(self, command):
-
-        return None
+        try:
+            print(command)
+            self.cursor.execute(command)
+            self.conn.commit()
+            print('Executado com sucesso')
+            return True
+        except Exception as ex:
+            print('Erro execute: ', ex)
+            return False
         
     def close_db(self):
         try:
+            self.cursor.close()
             self.conn.close()
         except Exception as ex:
             print(ex)
 
 
-    def convert_into_df(self):
+    def select_db(self):
         try:
             df = pd.read_sql_query('SELECT * FROM filmes', self.conn)
             return df
         except Exception as ex:
-            print(ex)
+            print('Erro select_db: ', ex)
