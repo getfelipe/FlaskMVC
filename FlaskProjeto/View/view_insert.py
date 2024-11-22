@@ -1,12 +1,14 @@
 import dash_bootstrap_components as dbc
 from dash import html, dash_table, Input, Output, State
-
+from View.alerts import layout_danger, layout_success
 
 insert_layout = html.Div(
             [
                 dbc.Modal(
                     [
                         dbc.ModalHeader(dbc.ModalTitle("Adicionar filme")),
+                        layout_danger,
+                        layout_success,
                         dbc.ModalBody([
                             dbc.Row([
                                 dbc.Col([

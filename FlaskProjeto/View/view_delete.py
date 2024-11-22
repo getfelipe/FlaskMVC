@@ -7,6 +7,30 @@ delete_layout = html.Div(
                 dbc.Modal(
                     [
                         dbc.ModalHeader(dbc.ModalTitle("Deletar filme")),
+                        html.Div(
+                            [
+                                dbc.Alert(
+                                    'Preencha o título correto do filme!',
+                                    id='alert-delete-fail',
+                                    is_open=False,
+                                    dismissable=True,
+                                    fade=True,
+                                    color='danger'
+                                )
+                            ],
+                        ),
+                        html.Div(
+                            [
+                                dbc.Alert(
+                                    'Deletado com sucesso!',
+                                    id='alert-save-delete-success',
+                                    is_open=False,
+                                    fade=True,
+                                    dismissable=True,
+                                    color='success'
+                                )
+                            ]
+                        ),
                         dbc.ModalBody([
                             dbc.Row([
                                 dbc.Col([

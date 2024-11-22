@@ -19,7 +19,7 @@ class Controller:
         self.__model.close_db()
         return df
     
-    def call_insert_sql(self, command):
+    def call_execute_sql(self, command):
         self.__model.connect_db()
         validate = self.__model.execute_sql(command)
         self.__model.close_db()

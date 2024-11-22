@@ -7,6 +7,30 @@ updt_layout = html.Div(
                 dbc.Modal(
                     [
                         dbc.ModalHeader(dbc.ModalTitle("Atualizar filme")),
+                        html.Div(
+                            [
+                                dbc.Alert(
+                                    'Preencha algum campo com o título correto do filme!',
+                                    id='alert-updt-fail',
+                                    is_open=False,
+                                    dismissable=True,
+                                    fade=True,
+                                    color='danger'
+                                )
+                            ],
+                        ),
+                        html.Div(
+                            [
+                                dbc.Alert(
+                                    'Atualizado com sucesso!',
+                                    id='alert-save-updt-success',
+                                    is_open=False,
+                                    fade=True,
+                                    dismissable=True,
+                                    color='success'
+                                )
+                            ]
+                        ),
                         dbc.ModalBody([
                             dbc.Row([
                                 dbc.Col([

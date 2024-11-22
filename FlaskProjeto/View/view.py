@@ -22,7 +22,6 @@ class View:
                 self.modal_updt,
                 delete_layout,
                 dcc.Store(id='filmes_db', data=self.dataset),
-                dcc.Store(id='dummy_output', data={}),
                 html.H1('Meus Filmes'),
                 html.Hr(),
                 dbc.Row([
@@ -128,21 +127,93 @@ class View:
             
 
         @self.__app.callback(
-            Output('dummy_output', 'data'),
+            [Output('alert-save-fail', 'is_open'), 
+            Output('alert-save-success', 'is_open')],
             Input('insert-sql', 'n_clicks'),
-            [State('title', 'value'), State('duration', 'value'), State('genre', 'value'), State('diretor', 'value'), State('rate', 'value')]
+            [State('title', 'value'), State('duration', 'value'), 
+            State('genre', 'value'), State('diretor', 'value'), 
+            State('rate', 'value')]
         )
         def insert_sql(n_clicks, title, duration, genre, diretor, rate):
-            if n_clicks:
+            if n_clicks:  # If button is clicked
                 if all([title, duration, genre, diretor, rate]):
                     command_sql = f'''
-                    INSERT INTO filmes (titulo, duracao, diretor, avaliacao, genero) VALUES ("{title}", "{duration}", "{diretor}", "{rate}", "{genre}")
+                    INSERT INTO filmes (titulo, duracao, diretor, avaliacao, genero) 
+                    VALUES ("{title}", "{duration}", "{diretor}", "{rate}", "{genre}")
                     '''
-                    validate = self.__controller.call_insert_sql(command_sql)
-                    return {}
+                    validate = self.__controller.call_execute_sql(command_sql)
+                    if validate:
+                        return [False, True]  # Success: Hide fail alert, show success alert
+                return [True, False]  # Fail: Show fail alert, hide success alert
+            return [False, False]  # Default: No alerts, no data
+
+        
+        @self.__app.callback(
+            [Output('alert-save-updt-success', 'is_open'), Output('alert-updt-fail', 'is_open')],
+            Input('updt-sql', 'n_clicks'),
+            [State('dropdown-filmes', 'value'), State('updt-duration', 'value'), State('updt-diretor', 'value'), State('updt-genre', 'value'), State('updt-rate', 'value')]
+        )
+        def update_sql(n_clicks, title, duration, diretor, genre, rate):
+            dict_updt = {
+                'duracao': duration,
+                'diretor': diretor,
+                'genero': genre,
+                'avaliacao': rate
+            }
+            if n_clicks:
+                if title and any([duration, diretor, genre, rate]):
+                    filled_keys = [(key, value) for key, value in dict_updt.items() if value]
+                    print(filled_keys) 
+
+                    for key_value in filled_keys:
+                        updt_sql = f'''
+                            UPDATE filmes
+                            SET {key_value[0]} = "{key_value[1]}"
+                            WHERE titulo = "{title}";
+                        '''
+                        validate = self.__controller.call_execute_sql(updt_sql)
+                        if not validate:
+                            message = 'Algo deu errado'
+                            return [False, True]
+
+
+                    return [True, False]
+                
                 else:
-                    message = ''
-                    return {}
+                    return [False, True]
+            else:
+                return [False, False]
+            
+
+        @self.__app.callback(
+            [Output('alert-save-delete-success', 'is_open'), Output('alert-delete-fail', 'is_open')],
+            Input('delete-sql', 'n_clicks'),
+            State('dropdown-delete-filmes', 'value')
+        )
+        def delete_sql(n_clicks, title):
+            if n_clicks:
+                if title:
+                    delete_sql = f'''
+                        DELETE FROM filmes WHERE titulo = "{title}"
+                    '''
+                    validate = self.__controller.call_execute_sql(delete_sql)
+
+                    if not validate:
+                        message = ''
+                        return [False, True]
+                    
+                    else:
+                        return [True, False]
+
+
+                else:
+                    return [False, True]
+            
+            else:
+                return [False, False]
+
+    
+                    
 
                 
             
