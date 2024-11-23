@@ -1,11 +1,17 @@
 import sqlite3
 import pandas as pd
+from dotenv import load_dotenv
+import os
+
+# Usar a variável de ambiente
+load_dotenv()
+file_path_db = os.getenv("FILE_PATH_DB_FILMES")
 
 class FilmesDB:
 
     def connect_db(self):
         try:
-            self.conn = sqlite3.connect('/home/felipe/Downloads/filmes.db')
+            self.conn = sqlite3.connect(file_path_db)
             self.cursor = self.conn.cursor()
         except Exception as ex:
             print(ex)
