@@ -17,8 +17,10 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 ## Tech Stack
 
 **Cliente:** Navegador Web Local
-
 **Servidor:** Flask
+
+**IDE:** Visual Studio Code
+**SGBD:** SQLite
 
 
 ## 🛠Instalação
@@ -35,11 +37,7 @@ exemplo "- pip install *[*Nome biblioteca Versão*]* "
   dash-bootstrap-components  "1.6.0"
   python-dotenv = "^1.0.1"
 
-```
-### Fazer o download do SQLite no site :
- ```bash
-   https://www.sqlite.org/
-```
+
 ### Fazer o dowload da aplicação / codigo com o comando :
  ```bash
   git clone https://github.com/getfelipe/FlaskMVC.git 
