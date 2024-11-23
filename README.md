@@ -22,6 +22,8 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 **IDE:** Visual Studio Code
 **SGBD:** SQLite
 
+**Linguagem de Programação:** Python 3.12
+
 
 ## 🛠Instalação
 
@@ -30,12 +32,13 @@ exemplo "- pip install *[*Nome biblioteca Versão*]* "
 
 ### Bibliotecas usadas :
 ```bash
-  python  "3.12"
-  Flask "3.0.3"
-  dash  "2.18.2"
-  pandas  "2.2.3"
-  dash-bootstrap-components  "1.6.0"
-  python-dotenv = "^1.0.1"
+ pip install
+      Flask==3.0.3
+      dash==2.18.2
+      pandas==2.2.3
+      dash-bootstrap-components==1.6.0
+      python-dotenv==1.0.1
+```
 
 
 ### Fazer o dowload da aplicação / codigo com o comando :
