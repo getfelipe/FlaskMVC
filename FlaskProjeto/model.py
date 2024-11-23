@@ -6,7 +6,7 @@ import os
 # Usar a variável de ambiente
 load_dotenv()
 file_path_db = os.getenv("FILE_PATH_DB_FILMES")
-
+print(file_path_db)
 class FilmesDB:
 
     def connect_db(self):
