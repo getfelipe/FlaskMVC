@@ -60,7 +60,7 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 
 
 
-### Para ver a tabela atualizada , basta apertar o botão de "VISUALIZAR FILME" conforme imagem abaixo:
+### Para ver a tabela atualizada , basta apertar o botão de "Visualizar Filme" conforme imagem abaixo:
 
 ![App Screenshot](https://i.ibb.co/L6dKj4c/Screenshot-from-2024-11-22-21-22-24.png)
 
