@@ -28,7 +28,6 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 ## 🛠Instalação
 
 ### Instalar as bibiotecas com o gerenciador de pacotes PIP
-exemplo "- pip install *[*Nome biblioteca Versão*]* "
 
 ### Bibliotecas usadas :
 ```bash
