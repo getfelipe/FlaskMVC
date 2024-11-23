@@ -36,7 +36,6 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
       dash==2.18.2
       pandas==2.2.3
       dash-bootstrap-components==1.6.0
-      python-dotenv==1.0.1
 ```
 
 
