@@ -1,12 +1,8 @@
 import sqlite3
 import pandas as pd
-from dotenv import load_dotenv
-import os
 
 # Usar a variável de ambiente
-load_dotenv()
-file_path_db = os.getenv("FILE_PATH_DB_FILMES")
-print(file_path_db)
+file_path_db = 'Coloque aqui o caminho da base de dados filmes.db'
 class FilmesDB:
 
     def connect_db(self):
@@ -22,10 +18,8 @@ class FilmesDB:
         
     def execute_sql(self, command):
         try:
-            print(command)
             self.cursor.execute(command)
             self.conn.commit()
-            print('Executado com sucesso')
             return True
         except Exception as ex:
             print('Erro execute: ', ex)

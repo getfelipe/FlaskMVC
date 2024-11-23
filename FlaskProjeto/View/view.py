@@ -77,7 +77,6 @@ class View:
         def load_dropdown_update(n1, n2, is_open, dataset):
             if n1 or n2:
                 if not dataset:
-                    print("Dataset is empty, returning default.")
                     return is_open, []
                 
                 else:
@@ -98,7 +97,6 @@ class View:
         def load_dropdown_delete(n1, n2, is_open, dataset):
             if n1 or n2:
                 if not dataset:
-                    print("Dataset is empty, returning default.")
                     return is_open, []
                 
                 else:
@@ -163,7 +161,6 @@ class View:
             if n_clicks:
                 if title and any([duration, diretor, genre, rate]):
                     filled_keys = [(key, value) for key, value in dict_updt.items() if value]
-                    print(filled_keys) 
 
                     for key_value in filled_keys:
                         updt_sql = f'''
@@ -173,7 +170,6 @@ class View:
                         '''
                         validate = self.__controller.call_execute_sql(updt_sql)
                         if not validate:
-                            message = 'Algo deu errado'
                             return [False, True]
 
 
