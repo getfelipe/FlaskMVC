@@ -27,9 +27,8 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 
 ## 🛠 Instalação
 
-### Instalar as bibiotecas com o gerenciador de pacotes PIP
+### Instalar as bibiotecas com o gerenciador de pacotes PIP:
 
-### Bibliotecas usadas :
 ```bash
  pip install
       Flask==3.0.3
