@@ -1,5 +1,5 @@
 
-# CRUD MVC em FLASK DASH 
+# CRUD MVC com FLASK DASH 
 
 Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - View - Controller), permitindo que o usuario possa adicionar, alterar, visualizar e deletar filmes ao banco de dados com os campos titulo, duracao, diretor, avaliação, genero.
 
@@ -25,7 +25,7 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 **Linguagem de Programação:** Python 3.12
 
 
-## 🛠Instalação
+## 🛠 Instalação
 
 ### Instalar as bibiotecas com o gerenciador de pacotes PIP
 
