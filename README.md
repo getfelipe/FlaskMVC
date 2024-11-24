@@ -38,11 +38,11 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 ```
 
 
-### Fazer o dowload da aplicação / codigo com o comando :
+### Fazer o dowload da aplicação com git:
  ```bash
   git clone https://github.com/getfelipe/FlaskMVC.git 
 ```
-### Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte variavel :
+### Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte variavel:
  ```bash
  #model.py/
 
@@ -52,7 +52,7 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
  ```bash
   python app.py
 ```
-### Acessar o seguinte endereço para visualizar a aplicação :
+### Acessar o seguinte endereço para visualizar a aplicação:
  ```bash
  http://127.0.0.1:8050/
 ```
