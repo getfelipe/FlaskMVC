@@ -6,7 +6,7 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 
 
 
-## Features
+## Características
   CRUD
 - Criar (Adicionar filme - titulo, duracao, diretor, avaliação, genero)
 - Atualizar (Alterar informações do Filme)
@@ -67,7 +67,7 @@ Aplicação CRUD de Filmes em python implementada usando o modelo MVC ( Model - 
 
 ![App Screenshot](https://i.ibb.co/rbBQfm4/Screenshot-from-2024-11-22-21-39-48.png)
 
-## Authors
+## Autores
 
 - [@Felipe Machado](https://github.com/getfelipe)
 - [@ Flavio S F](https://github.com/flavionesz)
