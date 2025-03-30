@@ -39,6 +39,7 @@ Com o docker aberto digite dentro da pasta FlaskProjeto:
 
 ```bash
 #/FlaskMVC/FlaskProjeto/
+
 docker build -t app_mvc .
 ```
 
@@ -77,7 +78,8 @@ Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte
 Digitar o comando no terminal
 
 ```bash
-/FlaskMVC/FlaskProjeto/
+#/FlaskMVC/FlaskProjeto/
+
  python app.py
 ```
 
