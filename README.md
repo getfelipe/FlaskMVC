@@ -47,6 +47,12 @@ Agora rode o container
 docker run -p 8050:8050 app_mvc
 ```
 
+### Acessar o seguinte endereço para visualizar a aplicação:
+
+```bash
+http://127.0.0.1:8050/
+```
+
 ### 2. Com PIP
 
 ### Instalar as bibiotecas com o gerenciador de pacotes PIP:
