@@ -77,6 +77,7 @@ Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte
 Digitar o comando no terminal
 
 ```bash
+/FlaskMVC/FlaskProjeto/
  python app.py
 ```
 
