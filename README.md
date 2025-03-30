@@ -47,7 +47,7 @@ Agora rode o container
 docker run -p 8050:8050 app_mvc
 ```
 
-### Acessar o seguinte endereço para visualizar a aplicação:
+Acessar o seguinte endereço para visualizar a aplicação:
 
 ```bash
 http://127.0.0.1:8050/
@@ -55,7 +55,7 @@ http://127.0.0.1:8050/
 
 ### 2. Com PIP
 
-### Instalar as bibiotecas com o gerenciador de pacotes PIP:
+Instalar as bibiotecas com o gerenciador de pacotes PIP:
 
 ```bash
  pip install
@@ -65,7 +65,7 @@ http://127.0.0.1:8050/
       dash-bootstrap-components==1.6.0
 ```
 
-### Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte variavel:
+Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte variavel:
 
 ```bash
 #model.py/
@@ -73,13 +73,13 @@ http://127.0.0.1:8050/
  file_path_db = 'Coloque aqui o caminho da base de dados filmes.db'
 ```
 
-### Digitar o comando no terminal
+Digitar o comando no terminal
 
 ```bash
  python app.py
 ```
 
-### Acessar o seguinte endereço para visualizar a aplicação:
+Acessar o seguinte endereço para visualizar a aplicação:
 
 ```bash
 http://127.0.0.1:8050/
