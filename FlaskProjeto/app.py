@@ -19,4 +19,4 @@ app = create_app()
 
 # Iniciar o servidor da aplicação
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run_server(host="0.0.0.0", debug=False)
