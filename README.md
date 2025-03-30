@@ -65,12 +65,6 @@ http://127.0.0.1:8050/
       dash-bootstrap-components==1.6.0
 ```
 
-### Fazer o dowload da aplicação com git:
-
-```bash
- git clone https://github.com/getfelipe/FlaskMVC.git
-```
-
 ### Indicar o caminho do banco de dados no arquivo model.py , atualizando a seguinte variavel:
 
 ```bash
