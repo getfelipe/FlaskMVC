@@ -38,6 +38,7 @@ CRUD
 Com o docker aberto digite dentro da pasta FlaskProjeto:
 
 ```bash
+#/FlaskMVC/FlaskProjeto/
 docker build -t app_mvc .
 ```
 
